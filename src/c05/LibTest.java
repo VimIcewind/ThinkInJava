@@ -1,6 +1,7 @@
 //: LibTest.java
 // Uses the library
 package c05;
+
 import com.bruceeckel.util.*;
 
 public class LibTest {
