@@ -12,6 +12,6 @@ public class ChocolateChip extends Cookie {
 
     public static void main(String[] args) {
         ChocolateChip x = new ChocolateChip();
-        //! x.foo(); // Can't access foo
+        x.foo();
     }
 } ///:~
