@@ -14,18 +14,26 @@ interface CanFly {
     void fly();
 }
 
+interface CanClimb {
+    void climb();
+}
+
 class ActionCharacter {
     public void fight() {
 
     }
 }
 
-class Hero extends ActionCharacter implements CanFight, CanSwim, CanFly {
+class Hero extends ActionCharacter implements CanFight, CanSwim, CanFly, CanClimb {
     public void swim() {
 
     }
 
     public void fly() {
+
+    }
+
+    public void climb() {
 
     }
 }
@@ -43,6 +51,10 @@ public class Adventure {
         x.fly();
     }
 
+    public static void y(CanClimb x) {
+
+    }
+
     public static void w(ActionCharacter x) {
         x. fight();
     }
@@ -52,6 +64,7 @@ public class Adventure {
         t(h); // Treat it as a CanFight
         u(h); // Treat it as a CanSwim
         v(h); // Treat it as a CanFly
+        y(h); // Treat it as a CanClimb
         w(h); // Treat it as a ActionCharacter
     }
 } ///:~
