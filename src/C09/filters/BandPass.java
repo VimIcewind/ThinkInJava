@@ -1,7 +1,7 @@
 // filters/BandPass.java
 package C09.filters;
 
-public class BandPass {
+public class BandPass extends Filter {
     double lowCutoff, highCutoff;
 
     public BandPass(double lowCut, double highCut) {
