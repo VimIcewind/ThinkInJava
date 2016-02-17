@@ -1,6 +1,8 @@
 //: Music4.java
 // Abstract classes and methods.
-package C09;
+package C09.music4;
+
+import C09.Note;
 
 abstract class Instrument {
     private int i; // Storage allocated for each
