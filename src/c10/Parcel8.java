@@ -7,7 +7,7 @@ import java.lang.invoke.WrongMethodTypeException;
 public class Parcel8 {
     public Wrapping wrapping(int x) {
         // Base constructor call;
-        return new Wrapping(x) {
+        return new Wrapping(x) { // Pass constructor argument.
             public int value() {
                 return super.value() * 47;
             }
