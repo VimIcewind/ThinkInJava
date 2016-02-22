@@ -31,4 +31,4 @@ public class BigEgg extends Egg {
 /* Output:
 New Egg()
 Egg.Yolk()
- *///:~
+*///:~
