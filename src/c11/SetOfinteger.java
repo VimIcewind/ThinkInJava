@@ -3,7 +3,7 @@ package c11;
 
 import java.util.*;
 
-public class SetOfinteger {
+public class SetOfInteger {
     public static void main(String[] args) {
         Random rand = new Random(47);
         Set<Integer> intset = new HashSet<Integer>();
