@@ -4,9 +4,7 @@
 package net.mindview.util;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.TreeSet;
+import java.util.*;
 
 public class TextFile extends ArrayList<String> {
     // Read a file as a single string:

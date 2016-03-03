@@ -1,4 +1,4 @@
-//: net/mindview/Stack.java
+//: net/mindview/util/Stack.java
 // Making a stack from a LinkedList.
 package net.mindview.util;
 

@@ -1,6 +1,8 @@
 //: generics/coffee/CoffeeGenerator.java
 // Generate different types of Coffee:
 package c15.coffee;
+import net.mindview.util.Generator;
+
 import java.util.*;
 
 public class CoffeeGenerator
