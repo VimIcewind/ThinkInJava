@@ -2,7 +2,7 @@ package c15;
 
 import net.mindview.util.*;
 
-class Amphibian{
+class Amphibian {
 
 }
 
@@ -25,7 +25,12 @@ public class TupleTest {
     }
 
     static FiveTuple<Vehicle, Amphibian, String, Integer, Double> k() {
-        return new FiveTuple<Vehicle, Amphibian, String, Integer, Double>(new Vehicle(), new Amphibian(), "hi", 47, 11.1);
+        return new FiveTuple<Vehicle, Amphibian, String, Integer, Double>(new Vehicle(), new Amphibian(), "hi", 47,
+                11.1);
+    }
+
+    static SixTuple<Vehicle, Amphibian, String, Integer, Double, Double> l() {
+        return new SixTuple<Vehicle, Amphibian, String, Integer, Double, Double>(new Vehicle(), new Amphibian(), "hi", 47, 11.1, 3.1415926);
     }
 
     public static void main(String[] args) {
@@ -35,5 +40,6 @@ public class TupleTest {
         System.out.println(g());
         System.out.println(h());
         System.out.println(k());
+        System.out.println(l());
     }
 }
