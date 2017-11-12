@@ -2,8 +2,6 @@
 package c15;
 
 import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
 
 public class IterableFibonacci extends Fibonacci implements Iterable<Integer> {
     private int n;

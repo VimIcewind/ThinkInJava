@@ -2,8 +2,6 @@
 // Holds a sequence of objects.
 package c10;
 
-import java.util.Objects;
-
 interface Selector {
     boolean end();
     Object current();

@@ -3,8 +3,6 @@
 // Demonstrates exception chaining.
 package c12;
 
-import java.util.Objects;
-
 class DynamicFieldException extends Exception {
 
 }

@@ -2,8 +2,6 @@
 // Calling the base-class constructor.
 package c10;
 
-import java.lang.invoke.WrongMethodTypeException;
-
 public class Parcel8 {
     public Wrapping wrapping(int x) {
         // Base constructor call;

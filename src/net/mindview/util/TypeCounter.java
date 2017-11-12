@@ -29,16 +29,16 @@ public class TypeCounter extends HashMap<Class<?>, Integer> {
             countClass(superClass);
     }
 
-    public String toString() {
-        StringBuilder result = new StringBuilder("{");
-        for (Entry<Class<?>, Integer> pair : entrySet()) {
-            result.append(pair.getKey().getSimpleName());
-            result.append("=");
-            result.append(pair.getValue());
-            result.append(", ");
-        }
-        result.delete(result.length() - 2, result.length());
-        result.append("}");
-        return result.toString();
-    }
+//    public String toString() {
+//        StringBuilder result = new StringBuilder("{");
+//        for (Entry<Class<?>, Integer> pair : entrySet()) {
+//            result.append(pair.getKey().getSimpleName());
+//            result.append("=");
+//            result.append(pair.getValue());
+//            result.append(", ");
+//        }
+//        result.delete(result.length() - 2, result.length());
+//        result.append("}");
+//        return result.toString();
+//    }
 } ///:~
