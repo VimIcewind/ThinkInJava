@@ -10,11 +10,11 @@ import java.util.*;
  * @version 4.0
  */
 public class HelloDate {
-    /** Entry point to class & application.
+    /** Entry point to class &amp; application.
      * @param args array of string arguments
-     * @throws exceptions No exceptions thrown
+     * @throws Exception No exceptions thrown
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println("Hello, is's: ");
         System.out.println(new Date());
     }
