@@ -13,6 +13,7 @@ class Game {
 
 class BoardGame extends Game {
     BoardGame(int i) {
+        // System.out.println("BoardGame constructor"); // call to super must be first statement in constructor
         super(i);
         System.out.println("BoardGame constructor");
     }
