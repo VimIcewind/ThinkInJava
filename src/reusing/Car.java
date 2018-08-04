@@ -1,6 +1,6 @@
 //: reusing/Car.java
 // Composition with public objects.
-package access;
+package reusing;
 
 /**
  * Created by HWD on 2018-8-4.

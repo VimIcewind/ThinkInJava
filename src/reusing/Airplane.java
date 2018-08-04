@@ -9,11 +9,11 @@ import static net.mindview.util.Print.print;
 /**
  * Created by HWD on 2018-7-18.
  */
-class Engine {
+class AirEngine {
     private String s;
 
-    Engine() {
-        print("Engine()");
+    AirEngine() {
+        print("AirEngine()");
         s = "Constructed";
     }
 
@@ -24,7 +24,7 @@ class Engine {
 
 public class Airplane {
     private String fuselage, wings, tail;
-    private Engine e;
+    private AirEngine e;
 
     public Airplane() {
         print("Inside Airplane()");
@@ -35,12 +35,12 @@ public class Airplane {
 
     public String toString() {
         if (e == null) { // lazy (delayed) initialization:
-            e = new Engine();
+            e = new AirEngine();
         }
         return "fuselage = " + fuselage + ", " +
                 "wings = " + wings + ", " +
                 "tail = " + tail + ", " +
-                "Engine = " + e;
+                "AirEngine = " + e;
     }
 
     public static void main(String[] args) {
