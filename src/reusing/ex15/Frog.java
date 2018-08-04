@@ -17,7 +17,7 @@ class Amphibian {
         System.out.println("Amphibian speak");
     }
 
-    protected void eat() {
+    void eat() {
         System.out.println("Amphibian eat");
     }
 
