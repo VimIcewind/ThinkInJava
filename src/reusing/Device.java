@@ -29,6 +29,8 @@ public class Device extends BasicDevice {
         d.showS();
         d.changeBasic("Changed"); // derived class can access protected
         d.showS();
+        d.changeS("Device");
+        d.showS();
         DeviceFail.main(args);
     }
 }
