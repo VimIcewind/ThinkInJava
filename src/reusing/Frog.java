@@ -3,7 +3,7 @@
 // Create a class called Amphibian. From this, inherit a class called Frog.
 // Put appropriate methods in the base class. In main(), create a Frog and
 // upcast it to Amphibian, and demonstrate that all the methods still work.
-package reusing.ex15;
+package reusing;
 
 /**
  * Created by HWD on 2018-8-4.

@@ -1,6 +1,6 @@
 //: reusing/Wind.java
 // Inheritance & upcasting.
-package reusing.ex15;
+package reusing;
 
 /**
  * Created by HWD on 2018-8-4.

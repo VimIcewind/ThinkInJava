@@ -1,6 +1,6 @@
 //: reusing/FinalData.java
 // The effect of final on fields.
-package reusing.ex15;
+package reusing;
 
 import java.util.Random;
 
