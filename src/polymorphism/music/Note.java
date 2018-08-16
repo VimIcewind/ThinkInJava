@@ -1,6 +1,6 @@
 //: polymorphism/music/Note.java
 // Notes to play on musical instruments.
-package polymorhpism.music;
+package polymorphism.music;
 
 /**
  * Created by HWD on 2018-8-13.

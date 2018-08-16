@@ -1,6 +1,6 @@
 //: polymorphism/music/Music2.java
 // Overloading instead of upcasting.
-package polymorhpism.music;
+package polymorphism.music;
 
 import static net.mindview.util.Print.print;
 

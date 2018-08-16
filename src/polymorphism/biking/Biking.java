@@ -5,7 +5,7 @@
 * method.
 */
 
-package polymorhpism.biking;
+package polymorphism.biking;
 
 /**
  * Created by HWD on 2018-8-13.

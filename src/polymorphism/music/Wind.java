@@ -1,5 +1,5 @@
-//: polymorhpism/music/Wind.java
-package polymorhpism.music;
+//: polymorphism/music/Wind.java
+package polymorphism.music;
 
 /**
  * Created by HWD on 2018-8-13.

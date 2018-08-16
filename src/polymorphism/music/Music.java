@@ -1,6 +1,6 @@
-//: polymorhpism/music/Music.java
+//: polymorphism/music/Music.java
 // Inheritance & upcasting.
-package polymorhpism.music;
+package polymorphism.music;
 
 /**
  * Created by HWD on 2018-8-13.
