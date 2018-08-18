@@ -127,24 +127,58 @@ public class Music3 {
         }
     }
 
+    private static RandomInstrumentGenerator gen = new RandomInstrumentGenerator();
+
     public static void main(String[] args) {
         // Upcasting during addition to the array:
-        Instrument[] orchestra = {
-                new Wind(),
-                new Percussion(),
-                new Stringed(),
-                new Brass(),
-                new Woodwind()
-        };
+        Instrument[] orchestra = new Instrument[20];
+        for (int i = 0; i < orchestra.length; i++) {
+            orchestra[i] = gen.next();
+        }
         tuneAll(orchestra);
         for (Instrument i : orchestra) {
             System.out.println(i);
         }
     }
 } /* Output:
-Wind.play() MIDDLE_C
-Percussion.play() MIDDLE_C
-Stringed.play() MIDDLE_C
 Brass.play() MIDDLE_C
+Brass.play() MIDDLE_C
+Piano.play() MIDDLE_C
+Wind.play() MIDDLE_C
+Piano.play() MIDDLE_C
+Wind.play() MIDDLE_C
 Woodwind.play() MIDDLE_C
+Piano.play() MIDDLE_C
+Percussion.play() MIDDLE_C
+Piano.play() MIDDLE_C
+Brass.play() MIDDLE_C
+Wind.play() MIDDLE_C
+Wind.play() MIDDLE_C
+Keyboard.play() MIDDLE_C
+Percussion.play() MIDDLE_C
+Brass.play() MIDDLE_C
+Stringed.play() MIDDLE_C
+Percussion.play() MIDDLE_C
+Wind.play() MIDDLE_C
+Wind.play() MIDDLE_C
+Brass
+Brass
+Piano
+Wind
+Piano
+Wind
+Woodwind
+Piano
+Percussion
+Piano
+Brass
+Wind
+Wind
+Keyboard
+Percussion
+Brass
+Stringed
+Percussion
+Wind
+Wind
 *///:~
