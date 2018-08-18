@@ -20,16 +20,26 @@ public class Shapes {
         // Make polymorphic method calls:
         for (Shape shp : s) {
             shp.draw();
+            shp.amend();
         }
     }
 } /* Output:
 Triangle.draw()
+Triangle.amend()
 Triangle.draw()
+Triangle.amend()
 Square.draw()
+Square.erase()
 Triangle.draw()
+Triangle.amend()
 Square.draw()
+Square.erase()
 Triangle.draw()
+Triangle.amend()
 Square.draw()
+Square.erase()
 Triangle.draw()
+Triangle.amend()
 Circle.draw()
+Circle.amend()
 *///:~

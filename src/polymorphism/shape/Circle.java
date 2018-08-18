@@ -16,4 +16,9 @@ public class Circle extends Shape {
     public void erase() {
         print("Circle.erase()");
     }
+
+    @Override
+    public void amend() {
+        print("Circle.amend()");
+    }
 }
