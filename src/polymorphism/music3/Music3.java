@@ -65,9 +65,27 @@ class Stringed extends Instrument {
     }
 }
 
+class Keyboard extends Instrument {
+    void play(Note n) {
+        print("Keyboard.play() " + n);
+    }
+
+    public String toString() {
+        return "Keyboard";
+    }
+
+    void adjust() {
+        print("Adjusting Keyboard");
+    }
+}
+
 class Brass extends Wind {
     void play(Note n) {
         print("Brass.play() " + n);
+    }
+
+    public String toString() {
+        return "Brass";
     }
 
     void adjust() {
@@ -80,8 +98,18 @@ class Woodwind extends Wind {
         print("Woodwind.play() " + n);
     }
 
-    void adjust() {
-        print("Adjusting Woodwind");
+    public String toString() {
+        return "Woodwind";
+    }
+}
+
+class Piano extends Keyboard {
+    void play(Note n) {
+        print("Piano.play() " + n);
+    }
+
+    public String toString() {
+        return "Piano";
     }
 }
 
