@@ -14,7 +14,7 @@ class Instrument{
         print("Instrument.play() " + n);
     }
 
-    String what() {
+    public String toString() {
         return "Instrument";
     }
 
@@ -28,7 +28,7 @@ class Wind extends Instrument {
         print("Wind.play() " + n);
     }
 
-    String what() {
+    public String toString() {
         return "Wind";
     }
 
@@ -42,7 +42,7 @@ class Percussion extends Instrument {
         print("Percussion.play() " + n);
     }
 
-    String what() {
+    public String toString() {
         return "Percussion";
     }
 
@@ -56,7 +56,7 @@ class Stringed extends Instrument {
         print("Stringed.play() " + n);
     }
 
-    String what() {
+    public String toString() {
         return "Stringed";
     }
 
@@ -109,6 +109,9 @@ public class Music3 {
                 new Woodwind()
         };
         tuneAll(orchestra);
+        for (Instrument i : orchestra) {
+            System.out.println(i);
+        }
     }
 } /* Output:
 Wind.play() MIDDLE_C
