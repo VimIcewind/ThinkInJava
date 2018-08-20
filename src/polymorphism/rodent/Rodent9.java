@@ -1,12 +1,38 @@
 package polymorphism.rodent;
 
+import java.io.CharConversionException;
+
 import static net.mindview.util.Print.print;
 
 /**
  * Created by HWD on 2018-8-18.
  */
+class Characteristic {
+    private String s;
+
+    Characteristic(String s) {
+        this.s = s;
+        print("Creating Characteristic " + s);
+    }
+}
+
+class Description {
+    private String s;
+
+    Description(String s) {
+        this.s = s;
+        print("Creating Description " + s);
+    }
+}
+
 class Rodent {
     private String name = "Rodent";
+    private Characteristic c = new Characteristic("has tail");
+    private Description d = new Description("small mammal");
+
+    Rodent() {
+        print("Rodent()");
+    }
 
     protected void eat() {
         print("Rodent.eat()");
@@ -27,6 +53,12 @@ class Rodent {
 
 class Mouse extends Rodent {
     private String name = "Mouse";
+    private Characteristic c = new Characteristic("likes cheese");
+    private Description d = new Description("nocturnal");
+
+    Mouse() {
+        print("Mouse()");
+    }
 
     protected void eat() {
         print("Mouse.eat()");
@@ -47,6 +79,12 @@ class Mouse extends Rodent {
 
 class Rat extends Rodent {
     private String name = "Rat";
+    private Characteristic c = new Characteristic("larger");
+    private Description d = new Description("black");
+
+    Rat() {
+        print("Rat()");
+    }
 
     protected void eat() {
         print("Rat.eat()");
@@ -67,6 +105,12 @@ class Rat extends Rodent {
 
 class Squirrel extends Rodent {
     private String name = "Squirrel";
+    private Characteristic c = new Characteristic("climbs trees");
+    private Description d = new Description("like nuts");
+
+    Squirrel() {
+        print("Squirrel()");
+    }
 
     protected void eat() {
         print("Squirrel.eat()");
@@ -93,9 +137,6 @@ public class Rodent9 {
         for (Rodent r : rodents) {
             r = gen.next();
             print(r + ": ");
-            r.eat();
-            r.run();
-            r.sleep();
         }
     }
 }
