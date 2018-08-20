@@ -31,6 +31,12 @@ class Lettuce {
     }
 }
 
+class Pickle {
+    Pickle() {
+        print("Pickle()");
+    }
+}
+
 class Lunch extends Meal {
     Lunch() {
         print("Lunch()");
@@ -46,6 +52,7 @@ class PortableLunch extends Lunch {
 public class Sandwich extends PortableLunch {
     private Bread b = new Bread();
     private Cheese c = new Cheese();
+    private Pickle p = new Pickle();
     private Lettuce l = new Lettuce();
 
     public Sandwich() {
