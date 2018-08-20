@@ -27,11 +27,16 @@ class Description {
 
 class Rodent {
     private String name = "Rodent";
+    private Shared shared;
+    private static long counter = 0;
+    private final long id = counter++;
     private Characteristic c = new Characteristic("has tail");
     private Description d = new Description("small mammal");
 
-    Rodent() {
-        print("Rodent()");
+    Rodent(Shared shared) {
+        print("Rodent() " + id);
+        this.shared = shared;
+        this.shared.addRef();
     }
 
     protected void eat() {
@@ -56,7 +61,8 @@ class Mouse extends Rodent {
     private Characteristic c = new Characteristic("likes cheese");
     private Description d = new Description("nocturnal");
 
-    Mouse() {
+    Mouse(Shared shared) {
+        super(shared);
         print("Mouse()");
     }
 
@@ -82,7 +88,8 @@ class Rat extends Rodent {
     private Characteristic c = new Characteristic("larger");
     private Description d = new Description("black");
 
-    Rat() {
+    Rat(Shared shared) {
+        super(shared);
         print("Rat()");
     }
 
@@ -108,7 +115,8 @@ class Squirrel extends Rodent {
     private Characteristic c = new Characteristic("climbs trees");
     private Description d = new Description("like nuts");
 
-    Squirrel() {
+    Squirrel(Shared shared) {
+        super(shared);
         print("Squirrel()");
     }
 
@@ -136,7 +144,8 @@ public class Rodent9 {
         Rodent[] rodents = new Rodent[10];
         for (Rodent r : rodents) {
             r = gen.next();
-            print(r + ": ");
+            print(r);
         }
+        gen.shared.showRefcount();
     }
 }
