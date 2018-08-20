@@ -22,6 +22,12 @@ class Shared {
         refcount++;
     }
 
+    protected void finalize() {
+        if (refcount > 0) {
+            print("Error: " + refcount + " Shared " + id + " objects in use");
+        }
+    }
+
     protected void dispose() {
         if (--refcount == 0) {
             print("Disposing " + this);
@@ -65,6 +71,14 @@ public class ReferenceCounting {
         for (Composing c : composing) {
             c.dispose();
         }
+        Composing compTest = new Composing(shared);
+        Composing compTest2 = new Composing(shared);
+        // Test finalize():
+        shared.finalize();
+        Shared sharedTest = new Shared();
+        Composing compTest3 = new Composing(sharedTest);
+        // Test sharedTest finalize():
+        sharedTest.finalize();
     }
 } /* Output:
 Creating Shared 0
@@ -79,4 +93,10 @@ disposing Composing 2
 disposing Composing 3
 disposing Composing 4
 Disposing Shared 0
+Creating Composing 5
+Creating Composing 6
+Error: 2 Shared 0 objects in use
+Creating Shared 1
+Creating Composing 7
+Error: 1 Shared 1 objects in use
 *///:~
