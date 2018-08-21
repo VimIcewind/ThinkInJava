@@ -38,6 +38,10 @@ class Unicycle extends Cycle {
         return wheels;
     }
 
+    public void balance() {
+        print("Balance Unicycle");
+    }
+
     public String toString() {
         return this.name;
     }
@@ -50,6 +54,10 @@ class Bicycle extends Cycle {
     @Override
     public int wheels() {
         return wheels;
+    }
+
+    public void balance() {
+        print("Balance Bicycle");
     }
 
     public String toString() {
@@ -78,11 +86,22 @@ public class Biking {
     }
 
     public static void main(String[] args) {
-        Unicycle u = new Unicycle();
-        Bicycle b = new Bicycle();
-        Tricycle t = new Tricycle();
-        ride(u);
-        ride(b);
-        ride(t);
+        Cycle[] ride = {
+                new Unicycle(),
+                new Bicycle(),
+                new Tricycle()
+        };
+        // Compile time error: cannot find balance() method in Cycle:
+        // for (Cycle c : ride) {
+        //     c.balance();
+        // }
+        ((Unicycle)ride[0]).balance();
+        ((Bicycle)ride[1]).balance();
+        // Compile time error: no balance() in Tricycle:
+        // ((Tricycle)ride[2]).balance();
+        // RTTI: ClassCastException: Tricycle cannot be case to Bicycle:
+        // ((Bicycle)ride[2]).balance();
+
+
     }
 }
