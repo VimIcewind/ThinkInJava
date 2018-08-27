@@ -7,6 +7,8 @@ package c05;
 
 import org.junit.Test;
 
+import static c05.Soup.*;
+
 class Soup {
     private Soup() {
     }
@@ -42,8 +44,8 @@ public class Lunch {
     public void test() {
         // Can't do this! Private constructor:
         //! Soup priv1 = new Soup();
-        Soup priv2 = Soup.makeSoup();
+        Soup priv2 = makeSoup();
         Sandwich f1 = new Sandwich();
-        Soup.access().f();
+        access().f();
     }
 }

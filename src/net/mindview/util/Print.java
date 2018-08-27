@@ -11,6 +11,11 @@ public class Print {
         System.out.println(obj);
     }
 
+    // Print with a newline:
+    public static void print(String s) {
+        System.out.println(s);
+    }
+
     // Print a newline by itself:
     public static void print() {
         System.out.println();
