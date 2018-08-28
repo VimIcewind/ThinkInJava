@@ -1,94 +1,103 @@
-// interfaces/rodent/Rodent1.java
-// TIJ4 Chapter Interfaces, Exercise 1, page 204
-/* Modify Exercise 9 in the previous chapter so that Rodent is an abstract class.
-* Make the methods of Rodent abstract whenever possible.
- */
-package interfaces.rodent;
+// interfaces/rodent/Rodent7.java
+// TIJ4 Chapter Interface, Exercise 7, page 207
+// Modify Exercise 9 in the Polymorphism chapter so that Rodent is an
+// interface.
+package interfaces.ex7;
 
 import static net.mindview.util.Print.print;
 
-/**
- * Created by HWD on 2018-8-23.
- */
-abstract class Rodent {
-    private String name = "Rodent";
+interface Rodent {
+    String name = "Rodent";
 
-    abstract protected void eat();
+    void eat();
 
-    abstract protected void run();
+    void run();
 
-    abstract protected void sleep();
+    void sleep();
 
-    abstract public String toString();
+    @Override
+    String toString();
 }
 
-class Mouse extends Rodent {
+class Mouse implements Rodent {
     private String name = "Mouse";
 
-    protected void eat() {
+    @Override
+    public void eat() {
         print("Mouse.eat()");
     }
 
-    protected void run() {
+    @Override
+    public void run() {
         print("Mouse.run()");
     }
 
-    protected void sleep() {
+    @Override
+    public void sleep() {
         print("Mouse.sleep()");
     }
 
+    @Override
     public String toString() {
         return name;
     }
 }
 
-class Rat extends Rodent {
+class Rat implements Rodent {
     private String name = "Rat";
 
-    protected void eat() {
+    @Override
+    public void eat() {
         print("Rat.eat()");
     }
 
-    protected void run() {
+    @Override
+    public void run() {
         print("Rat.run()");
     }
 
-    protected void sleep() {
+    @Override
+    public void sleep() {
         print("Rat.sleep()");
     }
 
+    @Override
     public String toString() {
         return name;
     }
 }
 
-class Squirrel extends Rodent {
-    private String name = "Rat";
+class Squirrel implements Rodent {
+    private String name = "Squirrel";
 
-    protected void eat() {
+    @Override
+    public void eat() {
         print("Squirrel.eat()");
     }
 
-    protected void run() {
+    @Override
+    public void run() {
         print("Squirrel.run()");
     }
 
-    protected void sleep() {
+    @Override
+    public void sleep() {
         print("Squirrel.sleep()");
     }
 
+    @Override
     public String toString() {
         return name;
     }
 }
 
-public class Rodent1 {
+public class Rodent7 {
     private static RandomRodentGenerator1 gen = new RandomRodentGenerator1();
 
     public static void main(String[] args) {
-        // Error: cannot instantiate abstract class:
+        // Error: cannot instantiate (abstract) interface:
         // Rodent x = new Rodent();
-        // But OK to create array to be downcast to derived objects:
+        // But OK to create array of implementing objects:
         Rodent[] rodents = new Rodent[10];
         for (Rodent r : rodents) {
             r = gen.next();
