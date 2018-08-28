@@ -1,0 +1,87 @@
+// interfaces/Sandwich8.java
+// TIJ4 Chapter Interfaces, Exercise 8, page 207
+/* In polymorphism.Sandwich.java, create an interface called FastFood (with
+ * appropriate methods) and change Sandwich so that it also implements
+ * FastFood.
+ */
+package interfaces;
+
+import javax.sound.sampled.Port;
+
+import static net.mindview.util.Print.print;
+
+interface FastFood {
+    void cheeseburger();
+
+    void fries();
+
+    void softDrink();
+}
+
+class Meal {
+    Meal() {
+        print("Meal()");
+    }
+}
+
+class Bread {
+    Bread() {
+        print("Bread()");
+    }
+}
+
+class Cheese {
+    Cheese() {
+        print("Cheese()");
+    }
+}
+
+class Lettuce {
+    Lettuce() {
+        print("Lettuce()");
+    }
+}
+
+class Lunch extends Meal {
+    Lunch() {
+        print("Lunch()");
+    }
+}
+
+class PortableLunch extends Lunch {
+    PortableLunch() {
+        print("PortableLunch()");
+    }
+}
+
+public class Sandwich8 extends PortableLunch implements FastFood {
+    private Bread b = new Bread();
+    private Cheese c = new Cheese();
+    private Lunch l = new Lunch();
+
+    public Sandwich8() {
+        print("Sandwich8()");
+    }
+
+    @Override
+    public void cheeseburger() {
+        print("Cheeseburger");
+    }
+
+    @Override
+    public void fries() {
+        print("Fries");
+    }
+
+    @Override
+    public void softDrink() {
+        print("Soft Drink");
+    }
+
+    public static void main(String[] args) {
+        Sandwich8 s = new Sandwich8();
+        s.cheeseburger();
+        s.fries();
+        s.softDrink();
+    }
+}
