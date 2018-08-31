@@ -28,12 +28,10 @@ interface Workup extends History, Exam, Labs {
     void zz();
 }
 
-class Doctor {
+abstract class Doctor {
     private int i = 0;
 
-    public void doc() {
-
-    }
+    abstract void doc();
 }
 
 class Anesthesiologist extends Doctor implements Workup {
@@ -69,6 +67,11 @@ class Anesthesiologist extends Doctor implements Workup {
 
     @Override
     public void zz() {
+
+    }
+
+    @Override
+    public void doc() {
 
     }
 }
