@@ -5,5 +5,8 @@
 *.iml
 *.ids
 
+tags
+TAGS
+
 out
 .idea
