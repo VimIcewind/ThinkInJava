@@ -38,9 +38,6 @@ public class AsListInference {
         List<Snow> snow2 = Arrays.asList(
                 new Light(), new Heavy()
         );
-        // Compiler says:
-        // found   : java.util.List<Powder>
-        // required: java.util.List<Snow>
 
         // Collections.addAll() doesn't get confused:
         List<Snow> snow3 = new ArrayList<Snow>();
