@@ -16,7 +16,7 @@ class Gerbil {
     private int gerbilNumber;
 
     public Gerbil(int i) {
-        gerbilNumber = 1;
+        gerbilNumber = i;
     }
 
     public void hop() {
