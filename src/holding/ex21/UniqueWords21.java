@@ -20,6 +20,7 @@ public class UniqueWords21 {
                 new TextFile("E:/GitHub/ThinkInJava/src/holding/SetOperations.java", "\\W+"));
         System.out.println("Words to count: " + words);
         Collections.sort(words, String.CASE_INSENSITIVE_ORDER);
+        System.out.println("Words to count: " + words);
         Map<String, Integer> wordCount = new LinkedHashMap<String, Integer>();
         Iterator it = words.iterator();
         int totalWords = 0;
