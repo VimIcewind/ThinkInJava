@@ -14,7 +14,7 @@ public class Statistics23 {
     private static int getBestInt20(int n) {
         Random rand = new Random();
         Map<Integer, Integer> m = new TreeMap<Integer, Integer>();
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < n; i++) {
             // Produce a number between 0 and 20:
             int r = rand.nextInt(20);
             Integer freq = m.get(r);
