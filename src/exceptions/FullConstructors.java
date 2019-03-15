@@ -1,5 +1,5 @@
 //: exceptions/FullConstructors.java
-package holding.exceptions;
+package exceptions;
 
 /**
  * Created by HWD on 2019/3/15 21:44
@@ -39,11 +39,11 @@ public class FullConstructors {
     }
 } /* Output:
 Throwing MyException from f()
-holding.exceptions.MyException
-	at holding.exceptions.FullConstructors.f(FullConstructors.java:20)
-	at holding.exceptions.FullConstructors.main(FullConstructors.java:30)
+exceptions.MyException
+	at exceptions.FullConstructors.f(FullConstructors.java:20)
+	at exceptions.FullConstructors.main(FullConstructors.java:30)
 Throwing MyException from g()
-holding.exceptions.MyException: Originated in g()
-	at holding.exceptions.FullConstructors.g(FullConstructors.java:25)
-	at holding.exceptions.FullConstructors.main(FullConstructors.java:35)
+exceptions.MyException: Originated in g()
+	at exceptions.FullConstructors.g(FullConstructors.java:25)
+	at exceptions.FullConstructors.main(FullConstructors.java:35)
 *///:~

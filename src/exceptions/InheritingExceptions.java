@@ -1,6 +1,6 @@
 //: exceptions/InheritingExceptions.java
 // Creating your own exceptions.
-package holding.exceptions;
+package exceptions;
 
 /**
  * Created by HWD on 2019/3/15 21:37
